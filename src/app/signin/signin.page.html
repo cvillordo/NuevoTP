@@ -1,0 +1,51 @@
+<ion-header [translucent]="true"> 
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-start">
+    Sign in 
+</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-img src="assets/icon/LOGOofficial.png"></ion-img>
+    <form>
+      <ion-item lines="full">
+        <ion-label position="floating" type="email">Email</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" required></ion-input>
+      </ion-item>
+  
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="warning" expand="block">Sign In</ion-button>    
+          
+        </ion-col>
+      </ion-row>
+    </form>
+   
+    <ion-text class="ion-text-center" color="black">
+    <p>Si luego quieres cambiar tu cuenta, lo puedes hacer desde configuraciones del perfil.</p>
+  </ion-text>
+    <ion-row class="centrar" >
+      <ion-button color="twitter" icon-start>
+        <a class="blanco" href="https://www.twitter.com/">  <ion-icon name="logo-twitter"></ion-icon>
+         Twitter</a>
+      </ion-button>
+      <ion-button color="facebook" icon-start>
+        <a class="blanco" href="https://www.facebook.com/"><ion-icon  name="logo-facebook"></ion-icon>
+         Facebook</a>
+      </ion-button>
+    </ion-row>
+
+    <a id="anchor" [routerLink]="['/forgot-password']" class="small-text"><p class="ion-text-center"> ¿Olvidaste tu contraseña? </p></a>
+  
+
+  <app-explore-container name="SIGN IN"></app-explore-container>
+</ion-content>

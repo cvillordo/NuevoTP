@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="ion-text-center">Easy Learning</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-label position="fixed" color="salmon"><p>Nombre(s)</p></ion-label>
+      <ion-input type="text" placeholder="John"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" color="salmon">Apellido(s)</ion-label>
+      <ion-input type="text" placeholder="Doe"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="fixed" color="salmon">Email</ion-label>
+      <ion-input placeholder="johndoe@email.com"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="salmon">Contraseña</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="salmon">Confirme su contraseña</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ciudad</ion-label>
+      <ion-select value="-">
+        <ion-select-option value="CABA">CABA</ion-select-option>
+        <ion-select-option value="Pilar">Pilar</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Universidad</ion-label>
+      <ion-select value="-">
+        <ion-select-option value="Universidad Austral">CABA</ion-select-option>
+        <ion-select-option value="UBA">Pilar</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+
+  <ion-item>
+    <ion-label id="condiciones"> <p id="condiciones">Acepto a los Términos de servicio y Política de Privacidad.</p></ion-label>
+    <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+  </ion-item>
+  <div class="ion-text-center">
+    <ion-button color="salmon">Continuar</ion-button>
+  </div>
+  <ion-text class="ion-text-center"><p>¿Ya tienes una cuenta?</p></ion-text>
+<a [routerLink]="['/signin']"> <p class="ion-text-center"> Iniciar Sesión </p></a>
+</ion-content>

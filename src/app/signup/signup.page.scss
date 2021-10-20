@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+
+ion-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+ion-header{
+    margin-bottom: 2.5rem;
+}
+
+ion-text, ion-label, ion-button, h4 {
+    font-family: 'Asap', sans-serif;
+}
+
+ion-img {
+    width: 10rem;
+    height: 10rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#condiciones {
+    font-size: 0.625rem;
+}
+a {
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    font-size: 1rem;
+    color: green;
+}
+.ion-color-salmon {
+    --ion-color-base: var(--ion-color-salmon);
+    --ion-color-base-rgb: var(--ion-color-salmon-rgb);
+    --ion-color-contrast: var(--ion-color-salmon-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-salmon-contrast-rgb);
+    --ion-color-shade: var(--ion-color-salmon-shade);
+    --ion-color-tint: var(--ion-color-salmon-tint);
+  }
