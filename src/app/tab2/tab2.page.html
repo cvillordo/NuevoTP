@@ -1,22 +1,73 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Profesores
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title><strong>Perfil del tutor</strong></ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Profesores</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-title class="encabezado"><h1></h1></ion-title>
 
-  <ion-title>HOLA PUTO</ion-title>
+  <ion-head>
+    <ion-chip>
+      <ion-avatar>
+        <img src="assets/Avatar.png">
+      </ion-avatar>
+      <ion-label><strong>Johanna Doe</strong><br>Universidad Austral</ion-label>
+    </ion-chip>
+    
+    <ion-icon name="star-outline"></ion-icon>
+    <ion-icon name="star"></ion-icon>
+    <ion-icon name="star"></ion-icon>
+    <ion-icon name="star"></ion-icon>
+    <ion-icon name="star"></ion-icon>
+    <br>
+    <ion-icon name="heart-outline"></ion-icon>
+    <ion-icon name="chatbox"></ion-icon>
 
+  
+    <br>
+    <br>
+    <br>
+    <br>
+  </ion-head>
+  <ion-footer>
+  </ion-footer>
+    <p id="descripcion">Soy programadora y graduada de la Universidad Austral. Si necesitas ayuda con las materias de Web Development y/o Apps Nativas, no dudes en contactarme!</p>
 
+  
+  <br>
+  <br>
 
+<ion-body>
+  <div id= "reservar">
+  <ion-button shape="round" color="salmon"><a [routerLink]="['/tabs/tab3']"><ion-text id="black">Reservar</ion-text></a> </ion-button>
+    <!--class ="button button-accent button small"-->
+  </div>
+</ion-body>
 
+<br>
+    <br>
+    <br>
+
+<ion-footer>
+  <p><strong>Planes</strong></p>
+
+<nav>
+
+  <ion-row>
+    <ion-col>25$ por: <ion-fab-button color="warning">Gold</ion-fab-button></ion-col>
+    <ion-col>18$ por: <ion-fab-button color="tertiary">Pro</ion-fab-button></ion-col>
+    <ion-col>12$ por: <ion-fab-button color="secondary">Básico</ion-fab-button></ion-col>
+  </ion-row>
+
+</nav>
+  <nav>
+
+  </nav>
+</ion-footer>
 
 </ion-content>

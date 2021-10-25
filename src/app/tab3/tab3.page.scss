@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+
+ion-title {
+    font-family: 'Quicksand', sans-serif;
+}
+
+ion-text, ion-select-option, ion-label, ion-item, p{
+    font-family: 'Asap', sans-serif;
+}
+
+.centro{
+    display: flex;
+    align-content: center;
+
+}

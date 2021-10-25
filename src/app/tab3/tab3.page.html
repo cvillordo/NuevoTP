@@ -1,8 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title><strong>
     Reserva
-    </ion-title>
+    </strong></ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -19,17 +22,18 @@
         <ion-input ></ion-input> <!--TIENE QUE VENIR DADO POR LA BDD-->
       </ion-item>
       <ion-item>
-        <ion-row>
-          <ion-col>
-            <ion-label position="fixed">FEcha</ion-label>
-             <ion-input type="text" placeholder="Doe"></ion-input>
-          </ion-col>
-          <ion-col>
-            <ion-label position="fixed">Profesor</ion-label>
-             <ion-input type="text" placeholder="Doe"></ion-input>
-          </ion-col>
-      </ion-row>
+        <ion-label position="fixed">Profesor</ion-label> 
+        <ion-input ></ion-input> <!--TIENE QUE VENIR DADO POR LA BDD-->
       </ion-item>
+      <ion-item>
+          <ion-label position="fixed">Fecha</ion-label>
+            <ion-datetime displayFormat="MM DD YY" placeholder="MM DD YY"></ion-datetime>
+      </ion-item>
+      <ion-item>
+            <ion-label>Hora</ion-label>
+            <ion-datetime displayFormat="HH:mm" placeholder="HH:mm"></ion-datetime>
+      </ion-item>
+      
 
       <ion-item>
         <ion-label position="fixed">Email</ion-label>
@@ -37,41 +41,29 @@
       </ion-item>
 
       <ion-item>
-        <ion-label>Contraseña</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Confirme su contraseña</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Ciudad</ion-label>
-        <ion-select value="-">
-          <ion-select-option value="CABA">CABA</ion-select-option>
-          <ion-select-option value="Pilar">Pilar</ion-select-option>
+        <ion-label>Plan</ion-label> 
+        <ion-select class="custom-options" interface="action-sheet" >
+          <ion-select-option value="GOLD">GOLD</ion-select-option>
+          <ion-select-option value="Pro">Pro</ion-select-option>
+          <ion-select-option value="Básico">Básico</ion-select-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
-        <ion-label>Universidad</ion-label>
-        <ion-select value="-">
+        <ion-label>Método de pago</ion-label><!--TIENE QUE VENIR DADO POR LA BDD-->
+        <ion-select class="custom-options" interface="action-sheet">
           <ion-select-option value="Universidad Austral">CABA</ion-select-option>
           <ion-select-option value="UBA">Pilar</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-card>
 
-    <ion-item>
-      <ion-label>Acepto a los Términos de servicio y Política de Privacidad.</ion-label>
-      <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
-    </ion-item>
+    <!--PUEDO USAR EVENT DE JS Y QUE SALGA UNA VENTANA PARA CONFIRMAR LA RESERVA-->
 
-    <ion-button color="success">Continuar</ion-button>
-    <p>¿Ya tienes una cuenta?</p>
-    <a>Inicia Sesión</a>
-  </ion-content>}
+    <ion-button color="success" type="submit" expand="full">Continuar</ion-button><br><br>
+
+  
+  </ion-content>
 
 
 
