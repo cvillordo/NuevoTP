@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
 
   <ion-toolbar>
-    <h3>Menú Principal</h3>
+    <h4 class="ion-text-center">Menú Principal</h4>
 
 <ion-searchbar showCancelButton="focus"></ion-searchbar>
 </ion-toolbar>
@@ -10,47 +10,70 @@
 
 <ion-content [fullscreen]="true">
 
-  <h2 class="enca">Materias</h2>
+  <h3 class="enca" class="ion-text-center" >Materias</h3>
+  
 
   <ion-slides [options]="option" class="ion-margin-top">
-    <ion-slide>
-      <ion-card>
-        <img src="assets/Derecho.jpeg" alt="">
-        <ion-content ><ion-title class="materias">Derecho</ion-title></ion-content>
+    <ion-slide class="slide">
+      <ion-card class="cards" style="height: 100%;">
+        <ion-img *ngIf="materias != undefined" src="{{materias[0].imagen}}" alt="" class="imagen" ></ion-img> 
+      <ion-card-header>
+        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[0].nombre}}</ion-title>
+      </ion-card-header>
       </ion-card>
     </ion-slide>
 
-    <ion-slide>
-      <ion-card>
-      <img src="assets/matematicas.jpg" alt="">
-      <ion-content><ion-title class="materias">Análisis Matemático I y II</ion-title></ion-content>
+    <ion-slide class="slide">
+      <ion-card  class="cards" style="height: 100%;">
+        <ion-img *ngIf="materias != undefined" src="{{materias[1].imagen}}" alt="" class="imagen" ></ion-img> 
+      <ion-card-header>
+        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[1].nombre}}</ion-title>
+      </ion-card-header>
       </ion-card>
     </ion-slide>
 
-    <ion-slide>
-      <ion-card>
-      <img src="assets/administracion.jpeg" alt="">
-      <ion-content><ion-title class="materias">Administración I y II</ion-title></ion-content>
+    <ion-slide class="slide">
+      <ion-card  class="cards" style="height: 100%;">
+        <ion-img *ngIf="materias != undefined" src="{{materias[2].imagen}}" alt="" class="imagen" ></ion-img> 
+      <ion-card-header>
+        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[2].nombre}}</ion-title>
+      </ion-card-header>
       </ion-card>
     </ion-slide>
 
-    <ion-slide>
-      <ion-card>
-        <img src="assets/contabilidad.jpg" alt="">
-        <ion-content><ion-title class="materias">Contabilidad I y II</ion-title></ion-content>
+    <ion-slide class="slide">
+      <ion-card  class="cards" style="height: 100%;">
+        <ion-img *ngIf="materias != undefined" src="{{materias[3].imagen}}" alt="" class="imagen" ></ion-img> 
+      <ion-card-header>
+        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[3].nombre}}</ion-title>
+      </ion-card-header>
       </ion-card>
     </ion-slide>
 
-    <ion-slide>
-      <ion-card>
-        <img src="assets/programacion.jpg" alt="">
-        <ion-content><ion-title class="materias">Web Development</ion-title></ion-content>
+    <ion-slide class="slide">
+      <ion-card  class="cards" style="height: 100%;">
+        <ion-img *ngIf="materias != undefined" src="{{materias[4].imagen}}" alt="" class="imagen" ></ion-img> 
+      <ion-card-header>
+        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[4].nombre}}</ion-title>
+      </ion-card-header>
       </ion-card>
     </ion-slide>
+
+    <ion-slide class="slide">
+      <ion-card  class="cards" style="height: 100%;">
+        <ion-img *ngIf="materias != undefined" src="{{materias[5].imagen}}" alt="" class="imagen" ></ion-img> 
+      <ion-card-header>
+        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[5].nombre}}</ion-title>
+      </ion-card-header>
+      </ion-card>
+    </ion-slide>
+    
+    <p>¿No encontras la materia que estabas buscando?</p> <p><a>Contanos cual es</a></p>
 
   </ion-slides>
-
-  <h2>Tutores Recomendados</h2>
+ <br>
+  <h3 class="enca" class="ion-text-center" >Tutores Recomendados</h3>
+  
 
     <ion-slides [options]="option" class="ion-margin-top">
       <ion-slide>

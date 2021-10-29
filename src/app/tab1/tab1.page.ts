@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Tab1Service } from './tab1.service';
+
 
 @Component({
   selector: 'app-tab1',
@@ -6,12 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+ 
+  public materias: any;
 
-  constructor() {}
+  constructor(private tab1Service: Tab1Service) {}
+
+      ngOnInit(){
+      this.tab1Service.getData().subscribe(data =>{
+        console.log("Informacion" , data[0].nombre);
+        this.materias=data;    
+
+      })
+  }  
 
 }
 
+
   
   
-
-
