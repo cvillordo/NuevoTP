@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Tab2Service } from './tab2.service';
+
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  constructor() {}
-
-}
+  cards: any[] = Array(5)
+  public tutor: any;
+ 
+  constructor(private tab2Service: Tab2Service) {}
+  ngOnInit(){
+    this.tab2Service.getData().subscribe(data =>{
+      console.log(data);
+    this.tutor=data;
+    })
+  }}

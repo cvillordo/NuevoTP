@@ -8,7 +8,7 @@ import { Tab1Service } from './tab1.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
- 
+  cards: any[] = Array(5)
   public materias: any;
 
   constructor(private tab1Service: Tab1Service) {}

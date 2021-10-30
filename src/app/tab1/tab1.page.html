@@ -1,4 +1,5 @@
-<ion-header [translucent]="true">
+
+<ion-header id="nav" class="new-background-color" [translucent]="true">
 
   <ion-toolbar>
     <h4 class="ion-text-center">Menú Principal</h4>
@@ -14,104 +15,22 @@
   
 
   <ion-slides [options]="option" class="ion-margin-top">
-    <ion-slide class="slide">
-      <ion-card class="cards" style="height: 100%;">
-        <ion-img *ngIf="materias != undefined" src="{{materias[0].imagen}}" alt="" class="imagen" ></ion-img> 
+    <ion-slide *ngFor="let card of cards; let i = index;" class="slide">
+      <ion-card  class="cards" style="height: 100%;">
+        <ion-img *ngIf="materias != undefined" src="{{materias[i].imagen}}" alt="" class="imagen" ></ion-img> 
       <ion-card-header>
-        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[0].nombre}}</ion-title>
+        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[i].nombre}}</ion-title>
       </ion-card-header>
       </ion-card>
     </ion-slide>
 
-    <ion-slide class="slide">
-      <ion-card  class="cards" style="height: 100%;">
-        <ion-img *ngIf="materias != undefined" src="{{materias[1].imagen}}" alt="" class="imagen" ></ion-img> 
-      <ion-card-header>
-        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[1].nombre}}</ion-title>
-      </ion-card-header>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide class="slide">
-      <ion-card  class="cards" style="height: 100%;">
-        <ion-img *ngIf="materias != undefined" src="{{materias[2].imagen}}" alt="" class="imagen" ></ion-img> 
-      <ion-card-header>
-        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[2].nombre}}</ion-title>
-      </ion-card-header>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide class="slide">
-      <ion-card  class="cards" style="height: 100%;">
-        <ion-img *ngIf="materias != undefined" src="{{materias[3].imagen}}" alt="" class="imagen" ></ion-img> 
-      <ion-card-header>
-        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[3].nombre}}</ion-title>
-      </ion-card-header>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide class="slide">
-      <ion-card  class="cards" style="height: 100%;">
-        <ion-img *ngIf="materias != undefined" src="{{materias[4].imagen}}" alt="" class="imagen" ></ion-img> 
-      <ion-card-header>
-        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[4].nombre}}</ion-title>
-      </ion-card-header>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide class="slide">
-      <ion-card  class="cards" style="height: 100%;">
-        <ion-img *ngIf="materias != undefined" src="{{materias[5].imagen}}" alt="" class="imagen" ></ion-img> 
-      <ion-card-header>
-        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[5].nombre}}</ion-title>
-      </ion-card-header>
-      </ion-card>
-    </ion-slide>
-    
-    <p>¿No encontras la materia que estabas buscando?</p> <p><a>Contanos cual es</a></p>
 
   </ion-slides>
+  <br> <br>
+  <ion-text class="ion-text-center"><p>¿No encontras la materia que estabas buscando?</p> <p color="success"><a href="">Contanos cual!</a></p></ion-text>
  <br>
-  <h3 class="enca" class="ion-text-center" >Tutores Recomendados</h3>
+    
   
-
-    <ion-slides [options]="option" class="ion-margin-top">
-      <ion-slide>
-        <ion-card>
-          <img src="assets/profesor1.jpeg" alt="">
-          <ion-content ><ion-title  class="materias">Pedro Siles</ion-title></ion-content>
-        </ion-card>
-      </ion-slide>
-
-      <ion-slide>
-        <ion-card>
-        <img src="assets/profesorA.jpeg" alt="">
-        <ion-content ><ion-title class="materias">Ana Paz</ion-title></ion-content>
-        </ion-card>
-      </ion-slide>
-  
-      <ion-slide>
-        <ion-card>
-        <img src="assets/JuanRamirez.jpeg" alt="">
-        <ion-content ><ion-title class="materias">Juan Ramirez</ion-title></ion-content>
-        </ion-card>
-      </ion-slide>
-  
-      <ion-slide>
-        <ion-card>
-          <img src="assets/profesor2.jpeg" alt="">
-          <ion-content><ion-title class="materias">Marco Solar</ion-title></ion-content>
-        </ion-card>
-      </ion-slide>
-  
-      <ion-slide>
-        <ion-card>
-          <img src="assets/profesor3.jpeg" alt="">
-          <ion-content><ion-title class="materias">Rodrigo Poppe</ion-title></ion-content>
-        </ion-card>
-      </ion-slide>
-  
-    </ion-slides>
   
   
 </ion-content>

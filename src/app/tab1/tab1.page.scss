@@ -7,6 +7,14 @@
     color: black;
 }
 
+ion-toolbar {
+  --color: #ffffff;
+  
+
+  opacity: 0,5;
+}
+//background: linear-gradient(45deg,#8D334C,#CF6964);
+
 ion-title{
   font-family: 'Asap', sans-serif;
   color: black;
@@ -21,11 +29,16 @@ ion-text{
  }
 
 .imagen {
+  background-color: black;
+  opacity: 0,8;
   object-fit: cover;
   width: 100%;
   height: 80%;
     
   }
+   a{
+     color:darkgreen;
+   }
 
   .cards{
     width:80%;

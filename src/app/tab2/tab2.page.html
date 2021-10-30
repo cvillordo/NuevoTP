@@ -3,58 +3,52 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title><strong>Perfil del tutor</strong></ion-title>
+    <ion-title><strong>Tutores</strong></ion-title>
   </ion-toolbar>
 
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-title class="encabezado"><h1></h1></ion-title>
+ <ion-text> <p id="descripcion">Encuentra el tutor que estabas necesitando!</p> <br></ion-text>
+ <br><br>
+ <ion-searchbar showCancelButton="focus" placeholder="search..."></ion-searchbar>
 
-  <ion-head>
-    <ion-chip>
-      <ion-avatar>
-        <img src="assets/Avatar.png">
-      </ion-avatar>
-      <ion-label><strong>Johanna Doe</strong><br>Universidad Austral</ion-label>
-    </ion-chip>
-    
-    <ion-icon name="star-outline"></ion-icon>
-    <ion-icon name="star"></ion-icon>
-    <ion-icon name="star"></ion-icon>
-    <ion-icon name="star"></ion-icon>
-    <ion-icon name="star"></ion-icon>
-    <br>
-    <ion-icon name="heart-outline"></ion-icon>
-    <ion-icon name="chatbox"></ion-icon>
+ <h3 class="enca" class="ion-text-center" >Tutores Recomendados</h3>
 
-  
-    <br>
-    <br>
-    <br>
-    <br>
-  </ion-head>
-  <ion-footer>
-  </ion-footer>
-    <p id="descripcion">Soy programadora y graduada de la Universidad Austral. Si necesitas ayuda con las materias de Web Development y/o Apps Nativas, no dudes en contactarme!</p>
+ <ion-slides [options]="option" class="ion-margin-top">
+  <ion-slide *ngFor="let card of cards; let i = index;" class="slide">
+    <ion-card  class="cards" style="height: 100%;">
+      <ion-card-header>
+        <ion-img *ngIf="tutor != undefined" src="{{tutor[i].foto}}" alt="" class="imagen" ></ion-img> 
+        <ion-card-title class="materias" class="ion-text-center" *ngIf="tutor != undefined" >{{tutor[i].nombre}} {{tutor[i].apellido}}</ion-card-title>
+       <!--<ion-card-subtitle class="ion-text-center" *ngIf="tutor != undefined">{{tutor[i].nombre}}</ion-card-subtitle>-->
+      </ion-card-header >
+      <ion-card-content *ngIf="tutor != undefined">
+        {{tutor[i].descripcion}} <br><br>
+        <b>Materia en la que me especializo: {{tutor[i].nombreM}}</b>
+      </ion-card-content>
+      <div id= "reservar">
+        <ion-button shape="round" color="salmon"><a [routerLink]="['/tabs/tab3']"><ion-text id="black">Reservar</ion-text></a> </ion-button>
+        </div>
+      
+    </ion-card>
+  </ion-slide>
 
+
+</ion-slides>
   
   <br>
   <br>
 
-<ion-body>
+<!--<ion-body>
   <div id= "reservar">
-  <ion-button shape="round" color="salmon"><a [routerLink]="['/tabs/tab3']"><ion-text id="black">Reservar</ion-text></a> </ion-button>
-    <!--class ="button button-accent button small"-->
+  <ion-button shape="round" color="salmon"><a [routerLink]="['/reserva']"><ion-text id="black">Reservar</ion-text></a> </ion-button>
   </div>
-</ion-body>
-
-<br>
-    <br>
-    <br>
+</ion-body>-->
 
 <ion-footer>
-  <p><strong>Planes</strong></p>
+  <p><strong>Planes</strong></p> 
 
 <nav>
 
