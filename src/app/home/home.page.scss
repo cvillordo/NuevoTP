@@ -2,23 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 
 
-ion-title {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.5rem; 
-    font-weight: bold;
-}
-
 ion-header{
     margin-bottom: 2.5rem;
 }
 
-ion-text, ion-button, h4 {
+ion-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+ion-text, ion-button, h4, p {
     font-family: 'Asap', sans-serif;
 }
 
 a {
     font-family: 'Asap', sans-serif;
     font-size: 1rem;
-    color: green;
+    color: lightgreen;
 }
 

@@ -19,11 +19,11 @@
    <ion-content>
     <ion-card>
       <ion-item>
-        <ion-label position="fixed">Estudiante</ion-label> 
+        <ion-label position="fixed">Estudiante</ion-label>
         <ion-input ></ion-input> <!--TIENE QUE VENIR DADO POR LA BDD-->
       </ion-item>
       <ion-item>
-        <ion-label position="fixed">Profesor</ion-label> 
+        <ion-label position="fixed">Profesor</ion-label>
         <ion-input ></ion-input> <!--TIENE QUE VENIR DADO POR LA BDD-->
       </ion-item>
       <ion-item>
@@ -34,7 +34,7 @@
             <ion-label>Hora</ion-label>
             <ion-datetime displayFormat="HH:mm" placeholder="HH:mm"></ion-datetime>
       </ion-item>
-      
+
 
       <ion-item>
         <ion-label position="fixed">Email</ion-label>
@@ -42,7 +42,7 @@
       </ion-item>
 
       <ion-item>
-        <ion-label>Plan</ion-label> 
+        <ion-label>Plan</ion-label>
         <ion-select class="custom-options" interface="action-sheet" >
           <ion-select-option value="GOLD">GOLD</ion-select-option>
           <ion-select-option value="Pro">Pro</ion-select-option>
@@ -61,7 +61,10 @@
 
     <!--PUEDO USAR EVENT DE JS Y QUE SALGA UNA VENTANA PARA CONFIRMAR LA RESERVA-->
 
-    <ion-button color="success" type="submit" expand="full"> <p>Continuar</p></ion-button><br><br>
+    <ion-footer>
+      <ion-button color="success" type="submit" expand="block">Continuar</ion-button>
+    </ion-footer>
 
-  
+
+
   </ion-content>
