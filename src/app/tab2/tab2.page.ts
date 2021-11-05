@@ -12,9 +12,9 @@ export class Tab2Page {
   public tutor: any;
  
   constructor(private tab2Service: Tab2Service) {}
-  ngOnInit(){
+  ngOnInit(){
     this.tab2Service.getData().subscribe(data =>{
       console.log(data);
     this.tutor=data;
     })
-  }}
+  }}

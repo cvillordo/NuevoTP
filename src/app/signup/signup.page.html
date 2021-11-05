@@ -15,26 +15,26 @@
 <ion-content>
   <ion-card>
     <ion-item>
-      <ion-label position="fixed" color="salmon"><p>Nombre(s)</p></ion-label>
-      <ion-input type="text" placeholder="John"></ion-input>
+      <ion-label position="fixed"><p>Nombre(s)</p></ion-label>
+      <ion-input type="text" [(ngModel)]="nombre" placeholder="John"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="fixed" color="salmon">Apellido(s)</ion-label>
-      <ion-input type="text" placeholder="Doe"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="fixed" color="salmon">Email</ion-label>
-      <ion-input placeholder="johndoe@email.com"></ion-input>
+      <ion-label position="fixed">Apellido(s)</ion-label>
+      <ion-input type="text" [(ngModel)]="apellido" placeholder="Doe"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label color="salmon">Contraseña</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-label position="fixed">Email</ion-label>
+      <ion-input [(ngModel)]="mail" placeholder="johndoe@email.com"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label color="salmon">Confirme su contraseña</ion-label>
+      <ion-label>Contraseña</ion-label>
+      <ion-input [(ngModel)]="contrasena" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Confirme su contraseña</ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
 
@@ -49,15 +49,19 @@
     <ion-item>
       <ion-label>Universidad</ion-label> <!--TIENE QUE VENIR DADO POR LA BDD-->
       <ion-select class="custom-options" interface="action-sheet">
-        <ion-select-option value="Universidad Austral">CABA</ion-select-option>
-        <ion-select-option value="UBA">Pilar</ion-select-option>
+        <ion-select-option value="Universidad Austral">Universidad Austral</ion-select-option>
+        <ion-select-option value="UBA">UBA</ion-select-option>
+        <ion-select-option value="Universidad Austral">Universidad de Palermo</ion-select-option>
+        <ion-select-option value="Universidad Austral">Universidad Nacional de la Plata</ion-select-option>
+        <ion-select-option value="Universidad Austral">Universidad Nacional de Mar del Plata</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>Método de pago</ion-label> <!--TIENE QUE VENIR DADO POR LA BDD-->
       <ion-select class="custom-options" interface="action-sheet">
-        <ion-select-option value="Universidad Austral">CABA</ion-select-option>
-        <ion-select-option value="UBA">Pilar</ion-select-option>
+        <ion-select-option value="Universidad Austral">Mercado Pago</ion-select-option>
+        <ion-select-option value="UBA">Paypal</ion-select-option>
+        <ion-select-option value="UBA">Tarjeta</ion-select-option>
       </ion-select>
     </ion-item>
 
@@ -69,7 +73,7 @@
     <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
   </ion-item>
   <div class="ion-text-center">
-    <ion-button color="salmon">Continuar</ion-button>
+    <ion-button color="salmon" [routerLink]="['/tabs/tab1']" (click)="enviarInfo()">Continuar</ion-button>
   </div>
   <ion-text class="ion-text-center"><p>¿Ya tienes una cuenta?</p></ion-text>
 <a [routerLink]="['/signin']"> <p class="ion-text-center"> Iniciar Sesión </p></a>
