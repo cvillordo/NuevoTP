@@ -2,14 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 
 
-ion-title{
+ion-title, h1{
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     font-weight: bold;
+}
+h1{
+  margin-left: 5%;
 }
 
 ion-header{
     margin-bottom: 2.5rem;
+}
+
+ion-toolbar{
+  --ion-backgroud-color: transparent;
+  opacity: 0;
 }
 
 ion-text, p, ion-button, h4 {
@@ -17,17 +25,17 @@ ion-text, p, ion-button, h4 {
 }
 
 ion-img {
-    width: 10rem;
-    height: 10rem;
+    width: 13rem;
+    height: 13rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+
 }
 #anchor {
     font-family: 'Asap', sans-serif;
     font-size: 1rem;
-    color: green;
+    color: limegreen;
     text-decoration: underline;
 }
 

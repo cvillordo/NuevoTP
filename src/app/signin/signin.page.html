@@ -1,36 +1,37 @@
-<ion-header [translucent]="true"> 
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title class="ion-text-start">
-    Sign in 
+
 </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-img src="assets/icon/LOGOofficial.png"></ion-img>
+<h1>Sign In</h1>
     <form>
       <ion-item lines="full">
         <ion-label position="floating" type="email">Email</ion-label>
         <ion-input type="text" required></ion-input>
       </ion-item>
-  
+
       <ion-item lines="full">
         <ion-label position="floating">Password</ion-label>
         <ion-input type="password" required></ion-input>
       </ion-item>
-  
+
       <ion-row>
         <ion-col>
-          <ion-button  [routerLink]="['/tabs/tab1']" type="submit" color="warning" expand="block" >Sign In</ion-button>    
-          
+          <ion-button  [routerLink]="['/tabs/tab1']" type="submit" color="warning" expand="block" >Sign In</ion-button>
+
         </ion-col>
       </ion-row>
     </form>
-   
-    <ion-text class="ion-text-center" color="black">
+
+    <ion-text class="ion-text-center" color="secondary">
     <p>Si luego quieres cambiar tu cuenta, lo puedes hacer desde configuraciones del perfil.</p>
   </ion-text>
     <ion-row class="centrar" >
@@ -45,7 +46,7 @@
     </ion-row>
 
     <a id="anchor" [routerLink]="['/forgot-password']" class="small-text"><p class="ion-text-center"> ¿Olvidaste tu contraseña? </p></a>
-  
 
-  
+
+
 </ion-content>
