@@ -28,7 +28,7 @@
       <ion-card  class="cards" style="height: 100%;">
         <ion-img *ngIf="materias != undefined" src="{{materias[i].imagen}}" alt="" class="imagen" ></ion-img>
       <ion-card-content>
-        <ion-title class="materias" class="ion-text-center"*ngIf="materias != undefined" >{{materias[i].nombre}}</ion-title>
+        <ion-title class="materias" class="ion-text-center" *ngIf="materias != undefined" >{{materias[i].nombre}}</ion-title>
       </ion-card-content>
       </ion-card>
     </ion-slide>
@@ -36,11 +36,7 @@
 
   </ion-slides>
 
-  <br> <br> <br>
-  <ion-item-divider class="enca" color="tertiary">
-    <ion-label>
-    </ion-label>
-  </ion-item-divider>
+  <br> 
   <br> <br>
   <ion-text class="ion-text-center"><p>¿No encontras la materia que estabas buscando?</p> <p color="success"><a href="">Contanos cual!</a></p></ion-text>
  <br>

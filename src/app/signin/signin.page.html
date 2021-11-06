@@ -3,15 +3,13 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-start">
-
-</ion-title>
+    <ion-title class="ion-text-center"> Sign in</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-img src="assets/icon/LOGOofficial.png"></ion-img>
-<h1>Sign In</h1>
+
     <form>
       <ion-item lines="full">
         <ion-label position="floating" type="email">Email</ion-label>
@@ -25,7 +23,7 @@
 
       <ion-row>
         <ion-col>
-          <ion-button  [routerLink]="['/tabs/tab1']" type="submit" color="warning" expand="block" >Sign In</ion-button>
+          <ion-button  [routerLink]="['/tabs/tab1']" type="submit" color="warning" expand="block" class="ion-text-center" >Sign In</ion-button>
 
         </ion-col>
       </ion-row>
