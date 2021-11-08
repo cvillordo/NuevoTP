@@ -19,16 +19,13 @@ export class SignupPage {
   public datos: any =[];
 
   constructor(private signupService: SignupService) {}
- 
  enviarInfo(){
     this.datos.push(this.nombre);
     this.datos.push(this.apellido);
     this.datos.push(this.mail);
     this.datos.push(this.contrasena);
     this.signupService.cargar_estudiante(this.datos).subscribe((d)=>{
-      alert("Usuario creado");
-    })
-    
-    }
-  
+      alert('Usuario creado');
+    });
+  }
 }
